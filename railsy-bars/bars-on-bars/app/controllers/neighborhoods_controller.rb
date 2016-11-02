@@ -19,6 +19,10 @@ class NeighborhoodsController < ApplicationController
 	def edit
 	end
 
-	def delete
+	def destroy
+		@neighborhood = Neighborhood.find(params[:id])
+		@neighborhood.destroy
+
+		redirect_to 'neighborhoods#index'
 	end
 end

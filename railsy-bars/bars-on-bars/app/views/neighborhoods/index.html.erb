@@ -1,3 +1,5 @@
 <%@neighborhoods.each do |neighborhood|%>
 	<h1><%=link_to neighborhood.name, neighborhood_path(neighborhood)%></h1>
+	<p><%=link_to 'Edit', edit_neighborhood_path(neighborhood)%></p>
+	<p><%=link_to 'Delete', neighborhood_path(neighborhood), method: :delete%></p>
 <%end%>
